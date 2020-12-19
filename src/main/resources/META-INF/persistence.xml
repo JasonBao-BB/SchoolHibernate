@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+        http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+
+    <persistence-unit name="mySQL" transaction-type="RESOURCE_LOCAL">
+        <properties>
+            <!--            数据库的地址-->
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/school" />
+
+            <property name="javax.persistence.jdbc.user" value="root" />
+            <property name="javax.persistence.jdbc.password" value="root" />
+
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+            <!--展示Hibernate所用的SQL语句-->
+            <property name="hibernate.show_sql" value="false" />
+            <!--reformat Hibernate所用的SQL语句-->
+            <property name="hibernate.format_sql" value="true" />
+            <!--hibernate 提供增删改查对于数据库的操作-->
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <!--mysql的方言-->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL55Dialect"/>
+        </properties>
+    </persistence-unit>
+
+    <persistence-unit name="oracle" transaction-type="RESOURCE_LOCAL">
+        <properties>
+
+        </properties>
+    </persistence-unit>
+
+    <persistence-unit name="glassFish" transaction-type="RESOURCE_LOCAL">
+        <properties>
+
+        </properties>
+    </persistence-unit>
+
+</persistence>
